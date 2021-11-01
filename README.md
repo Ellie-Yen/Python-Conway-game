@@ -13,7 +13,7 @@ The lighter number in background is just to indicate the empty space it has trim
     
   * Concept:  
     Unlike 2-D array made of built-in list, numpy array is more flexible to be reshaped or copied. Furthermore, setting dtype = int8 could even achieve a better memory optimization.
-    If a live cell is found, the *next_cells* value of its neighbors would be added by 2. Thus, we will know whether the cell will live in next generation by following rules.
+    If a live cell is found, the *next_cells* value of its neighbors would be added by **2**. Thus, we will know whether the cell will live in next generation by following rules.
     * value = 5, it was lived and surrounded by 2 live neighbors (1 + 2 * 2);
     * value = 7, it was lived and surrounded by 3 live neighbors (1 + 2 * 3);
     * value = 6, it was dead and surrounded by 3 live neighbors (0 + 2 * 3);
@@ -23,9 +23,6 @@ The lighter number in background is just to indicate the empty space it has trim
 
   * Preview: (edit the layout for less space used)
     ```
-      >> cells = numpy.random.randint(2, size=(3, 5))
-      >> get_generation(cells, 5)
-      
       generation0      generation1      generation2
        [[1 1 1 0 1]     [[0 1 0 0]]      [[1 1 0 0]
        [0 1 0 1 0]       [1 1 1 1]        [1 1 0 1]
